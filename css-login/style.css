@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	text-decoration: none;
+}
+
+.hero{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(96, 204, 250, 0.9),rgba(96, 204, 250, 0.6), rgba(174, 36, 182, 0.6), rgb(174, 36, 182, 0.9)), url(../resources/backgroundImage.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+
+/*
+.hero-overlay{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+
+	background: linear-gradient(-45deg, rgba(174, 0, 255, 0.5), rgba(89, 0, 255, 0.5), rgba(0, 0, 0, 0.5));
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+*/
+
+.form-box{
+	width: 90%;
+	max-width: 450px;
+	height: 600px;
+	margin: auto;
+	background: rgba(8, 8, 8, 0.8);
+    border-color: #ff0077;
+    box-shadow: 0 0 20px #ff0077;
+	padding: 2px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	border-radius: 5px;
+	position: relative;
+	top: 100px;
+}
+
+/*Login Register button design*/
+
+.button-box{
+	width: 70%;
+	max-width: 280px;
+	height: 50px;
+	margin: auto;
+	margin-top: 35px;
+	position: relative;
+	border-color: #ff0077;
+    box-shadow: 0 0 5px #ff0077;
+	border-radius: 30px;
+}
+
+.toggle-btn{
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+    color: white;
+	height: 100%;
+	width: 48.9%;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+
+@media all and (max-width: 320px) {
+	.toggle-btn {
+	  font-size: 12px;
+	  width: 47%;
+	}
+  }
+
+#btn{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, #840096, rgb(37, 0, 41));
+	border-radius: 30px;
+	transition: .5s;
+}
+
+.input-group{
+	top: 120px;
+	position: absolute;
+	width: 70%;
+	max-width: 280px;
+	transition: .5s;
+}
+
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 2px solid rgb(105, 105, 105);
+	outline: none;
+	background: transparent;
+	color: white;
+}
+
+.input-field::placeholder{
+	color: rb(105, 105, 105);
+}
+
+.submit-btn{
+	width: 85%;
+	height: 45px;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, rgba(200, 0, 226, 0.75), rgb(86, 0, 95, 0.75));
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+	color: white;
+}
+
+.check-box{
+	margin: 30px 10px 30px 0;
+}
+
+
+
+#login {
+    left: 50%;
+    transform: translate(-50%);
+	visibility: visible;
+  	opacity: 1;
+  	transition: visibility 0s, opacity 1s linear;
+}
+
+#register {
+    left: 50%;
+	transform: translate(-50%);	
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s, opacity 1s linear;
+}	

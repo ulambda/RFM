@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFM - Royalty Free Music</title>
+    <link rel="stylesheet" href="../css/searchstyle.css">
+    <link rel="stylesheet" href="../css/waves.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+    rel="stylesheet">
+</head>
+<body>
+
+    <!-- top navigation -->
+    <header class="top-nav">
+        <h1 style="cursor: pointer;">RFM</h1>
+        <div class="searchdiv">
+            <input class="searchbar" type="text" placeholder="Search">
+        </div>
+        <button class="login" style="cursor: pointer;">Login</button>
+
+    </header>
+    
+    <!-- bottom navigation -->
+    <section class="btm-nav">
+            <div class="col1">
+                <div class="song-cover" style="background: rgb(112, 112, 112);"><img class="cover" src="http://s2.hulkshare.com/song_images/original/8/c/d/8cd78bb2fce2651b759f3586853f1885.jpg" alt="">
+                </div>
+                <div class="song-info">
+                    <div class="song-title">
+                        <h2>Comptine d'un autre été</h2>
+                    </div>
+                    <div class="song-artist">
+                        <p>Upwards.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col2">
+    
+                <!-- temporary -->
+    
+                <audio class="audioplayer" id="audio" controls style="width: 70%; height: 1.5rem;margin: 0 auto;">
+                    <source src="../media/audio/tobe.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>  
+            </div>
+            <div class="col3"></div>
+
+
+        
+    </section>
+
+    <!-- content -->
+    <div class="main-container">
+        
+
+      
+
+            
+            <div class="results">
+                <button id="fries" class="hamburger"><i class="material-icons">filter_list</i></button>
+
+            <ul class="filters">
+                
+                <p class="exploretext">Explore</p>
+                <button class="accordion showfilter1">Mood <i class="material-icons ddarrow1 arrowicon">chevron_right</i>
+                </button>
+                <div class="panel">
+                    <button>Chill</button>
+                </div>
+
+                <button class="accordion showfilter2">Genre <i class="material-icons ddarrow2 arrowicon">chevron_right</i>
+                </button>
+                <div class="panel">
+                    <button>EDM</button>
+                    <button>Clasical</button>
+                    <button>Lo-Fi</button>
+                    <button>EDM</button>
+                    <button>EDM</button>                
+                </div>
+
+
+                <button class="accordion showfilter3">Tags <i class="material-icons ddarrow3 arrowicon">chevron_right</i>
+                </button>
+                <div class="panel">
+                    <button>poop</button>
+                </div>
+
+            </ul>
+
+
+           
+              
+        <div id="ONE" class="tabcontent"></div><div id="TWO" class="tabcontent"></div><div id="THREE" class="tabcontent"></div><div id="FOUR" class="tabcontent"></div><div id="FIVE" class="tabcontent"></div><div id="SIX" class="tabcontent"></div><div id="SEVEN" class="tabcontent"></div>
+            <ul class="musiclist">
+                <div class="sortresult">
+                        <div class="sortresultbtn">
+                            
+                    <button class="sortbutton" onclick="openCity(event, 'ONE')" id="defaultOpen" >A-Z</button>
+                    <button class="sortbutton" onclick="openCity(event, 'TWO')">Z-A</button>
+                    <button class="sortbutton" onclick="openCity(event, 'THREE')">New</button>
+                    <button class="sortbutton" onclick="openCity(event, 'FOUR')">Popular</button>
+                    <button class="sortbutton" onclick="openCity(event, 'FIVE')">Shortest</button>
+                    <button class="sortbutton" onclick="openCity(event, 'SIX')">Longest</button>
+                    <button class="sortbutton" onclick="openCity(event, 'SEVEN')">Most Downloaded</button>
+                </div>
+
+            </div>
+
+
+
+
+                <li onclick="play()">    
+                    <div class="details" onclick="openCity(event, 'London')" id="defaultOpen">
+                    <button class="playmusic" ><i class=" material-icons" title="Play">play_arrow</i></button>
+                    <img class="cover" src="http://s2.hulkshare.com/song_images/original/8/c/d/8cd78bb2fce2651b759f3586853f1885.jpg" alt="">
+                    <div class="info">
+                        <p class="title">Comptine d'un autre été </p>
+                        <div class="tagcont">
+                            <p class="artist">Upwards </p>
+                            <p class="tags">EDM</p>
+                            <p class="tags">Future</p>
+                            <p class="time">3:59 </p>
+
+                        </div>
+                    </div>
+                    </div>         
+                    <div class="rightIcons">
+                        <div class="dropdown">
+                            <span>
+                                <button class="more"><i class="material-icons" title="Add to playlist">more_vert</i></button>
+                            </span>
+                            <div class="dropdown-content">
+                            <p>button</p>
+                            </div>
+                          </div>
+                    </div>
+                </li>
+                <li onclick="play()">    
+                    <div class="details" onclick="openCity(event, 'London')" id="defaultOpen">
+                    <button class="playmusic" ><i class=" material-icons" title="Play">play_arrow</i></button>
+                    <img class="cover" src="http://s2.hulkshare.com/song_images/original/8/c/d/8cd78bb2fce2651b759f3586853f1885.jpg" alt="">
+                    <div class="info">
+                        <p class="title">Comptine d'un autre été </p>
+                        <div class="tagcont">
+                            <p class="artist">Upwards </p>
+                            <p class="tags">EDM</p>
+                            <p class="tags">Future</p>
+                            <p class="time">3:59 </p>
+
+                        </div>
+                    </div>
+                    </div>         
+                    <div class="rightIcons">
+                        <div class="dropdown">
+                            <span>
+                                <button class="more"><i class="material-icons" title="Add to playlist">more_vert</i></button>
+                            </span>
+                            <div class="dropdown-content">
+                            <p>button</p>
+                            </div>
+                          </div>
+                    </div>
+                </li>
+                <li onclick="play()">    
+                    <div class="details" onclick="openCity(event, 'London')" id="defaultOpen">
+                    <button class="playmusic" ><i class=" material-icons" title="Play">play_arrow</i></button>
+                    <img class="cover" src="http://s2.hulkshare.com/song_images/original/8/c/d/8cd78bb2fce2651b759f3586853f1885.jpg" alt="">
+                    <div class="info">
+                        <p class="title">Comptine d'un autre été </p>
+                        <div class="tagcont">
+                            <p class="artist">Upwards </p>
+                            <p class="tags">EDM</p>
+                            <p class="tags">Future</p>
+                            <p class="time">3:59 </p>
+
+                        </div>
+                    </div>
+                    </div>         
+                    <div class="rightIcons">
+                        <div class="dropdown">
+                            <span>
+                                <button class="more"><i class="material-icons" title="Add to playlist">more_vert</i></button>
+                            </span>
+                            <div class="dropdown-content">
+                            <p>button</p>
+                            </div>
+                          </div>
+                    </div>
+                </li>
+                <li onclick="play()">    
+                    <div class="details" onclick="openCity(event, 'London')" id="defaultOpen">
+                    <button class="playmusic" ><i class=" material-icons" title="Play">play_arrow</i></button>
+                    <img class="cover" src="http://s2.hulkshare.com/song_images/original/8/c/d/8cd78bb2fce2651b759f3586853f1885.jpg" alt="">
+                    <div class="info">
+                        <p class="title">Comptine d'un autre été </p>
+                        <div class="tagcont">
+                            <p class="artist">Upwards </p>
+                            <p class="tags">EDM</p>
+                            <p class="tags">Future</p>
+                            <p class="time">3:59 </p>
+
+                        </div>
+                    </div>
+                    </div>         
+                    <div class="rightIcons">
+                        <div class="dropdown">
+                            <span>
+                                <button class="more"><i class="material-icons" title="Add to playlist">more_vert</i></button>
+                            </span>
+                            <div class="dropdown-content">
+                            <p>button</p>
+                            </div>
+                          </div>
+                    </div>
+                </li>
+
+ 
+                  
+            
+                
+
+            </ul>
+        </div>
+
+
+
+    
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/waves.min.js"></script>
+
+<script type="text/javascript">
+    Waves.attach('button', ['waves-effect', 'waves-light']);
+    Waves.attach('.ripple', ['waves-effect', 'waves-light']);
+    Waves.attach('#myUL Li', ['waves-effect', 'waves-light']);
+    Waves.attach('.active', ['waves-effect', 'waves-dark']);
+    Waves.attach('#sort', ['waves-effect', 'waves-dark']);
+    Waves.attach('#sort option', ['waves-effect', 'waves-dark']);
+
+    
+
+  
+
+    Waves.init();
+</script>
+<script>
+    var myAudio = document.getElementById("audio");
+var isPlaying = false;
+
+function play() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+};
+
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+</script>
+
+<script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, sortbutton;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      sortbutton = document.getElementsByClassName("sortbutton");
+      for (i = 0; i < sortbutton.length; i++) {
+        sortbutton[i].className = sortbutton[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+<script>
+$(document).ready(function(){
+    $(".showfilter1").click(function(){
+    if($(".ddarrow1").hasClass("activeate")){
+    $(".ddarrow1").removeClass("activeate")
+    }else{
+    $(".ddarrow1").addClass("activeate")
+    }
+    });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $(".showfilter2").click(function(){
+        if($(".ddarrow2").hasClass("activeate")){
+        $(".ddarrow2").removeClass("activeate")
+        }else{
+        $(".ddarrow2").addClass("activeate")
+        }
+        });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".showfilter3").click(function(){
+            if($(".ddarrow3").hasClass("activeate")){
+            $(".ddarrow3").removeClass("activeate")
+            }else{
+            $(".ddarrow3").addClass("activeate")
+            }
+            });
+            });
+        </script>
+
+<script>
+    $(document).ready(function(){
+      $(".hamburger").click(function(){
+        $(".filters").toggleClass("toggleshowmobile");
+      });
+    });
+    </script>
+
+
+
+</html>

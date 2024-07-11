@@ -1,0 +1,144 @@
+body{
+    background-color: rebeccapurple;
+    color: transparent;
+    overflow: hidden;
+
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(45deg, #49a09d, #5f2c82, #49a09d, #5f2c82);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.containerbanner {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}
+
+
+.fourofour-container{
+    position: relative;
+    margin-left:auto ;
+    margin-right:auto ;
+    background-color: transparent;
+    width: 80%;
+    height: 100vh;
+    
+    
+}
+
+.center{
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: center;
+    width: 100%;
+
+}
+
+.fourofour{
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left:-20px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: center;
+    background-color: transparent;
+}
+
+.fourofour p{
+    margin-top: 65px;
+    font-size: 9rem;
+    color: white;
+
+}
+
+.fourofour a{
+    color: white;
+
+}
+
+.tip{
+    font-size: 1.5rem;
+
+}
+
+.backbuttoncontainer{
+    width: 100%;
+    background-color: transparent;
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: center;
+}
+
+.backbutton{
+    padding:8px;
+    padding-left:40px ;
+    padding-right:40px ;
+    top:20px;
+    position: relative;
+    background-color: rgba(214, 214, 214, 0.384);
+    color: white;
+    font-size: 1rem;
+    display: block;
+    border: none;
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+
+}
+
+#homeLink {
+    background-color: transparent;
+    color: white;
+  }
+
+  .plus101container{
+    width: 100%;
+    background-color: transparent;
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: center;
+}
+
+.plus101button{
+    padding:8px;
+    top:-100px;
+    left:150px;
+    position: relative;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    border: none;
+    margin-left:auto ;
+    margin-right:auto ;
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+
+}

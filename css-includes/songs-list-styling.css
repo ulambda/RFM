@@ -1,0 +1,510 @@
+#songsTable {
+  display: none;
+}
+
+.musiclist li {
+  padding-left: 5px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  display: flex;
+  background-color: rgb(14, 14, 14);
+  width: 96%;
+  position: relative;
+  max-height: 100px;
+  border-radius: 35px;
+  box-shadow: 3px 3px 1.5px rgb(96, 15, 101);
+  margin-bottom: 15px;
+  transition-duration: 1s;
+}
+
+.musiclist .rightIcons {
+  background: transparent;
+  height: 100%;
+  position: relative;
+  right: -20px;
+  top: 0px;
+}
+
+@media all and (max-width: 1229px) {
+  .musiclist li {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 97%;
+    left: 0px;
+  }
+}
+
+@media all and (max-width: 870px) {
+  .musiclist li {
+    padding-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 406px) {
+  .musiclist li {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media all and (max-width: 1229px) {
+  .musiclist .rightIcons {
+    right: -20px;
+  }
+}
+
+@media all and (max-width: 1139px) {
+  .more {
+    position: relative;
+    right: 0px;
+  }
+}
+
+.details {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+}
+
+.info {
+  display: flex;
+  width: 70%;
+  position: relative;
+  top: -8px;
+}
+
+@media all and (max-width: 870px) {
+  .info {
+    display: block;
+    position: relative;
+    top: -15px;
+  }
+}
+
+.title {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  position: relative;
+}
+
+@media all and (max-width: 870px) {
+  .title {
+    width: 100%;
+  }
+}
+
+.composer {
+  font-size: 16px;
+  color: #707070;
+  margin-left: 10px;
+  position: relative;
+}
+
+.time {
+  margin-top: 25px;
+  position: relative;
+  background-color: transparent;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #707070;
+  left: 100px;
+}
+
+@media all and (max-width: 870px) {
+  .time {
+    left: 0px;
+  }
+}
+
+.tags {
+  margin-top: 22px;
+  margin-left: 2px;
+  position: relative;
+  background-color: #b6b6b6;
+  margin-left: 20px;
+  margin-right: -12px;
+  left: 50px;
+  text-align: center;
+  font-size: 13px;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 870px) {
+  .tags {
+    left: 0px;
+  }
+}
+
+.unusedtags {
+  margin-top: 22px;
+  margin-left: 2px;
+  position: relative;
+  background-color: #242424;
+  border: 1px solid #b6b6b6;
+  margin-left: 20px;
+  margin-right: -12px;
+  text-align: center;
+  font-size: 13px;
+  color: #b6b6b6;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+.tagcont {
+  position: relative;
+  width: 30%;
+  background-color: transparent;
+  display: flex;
+}
+
+@media all and (max-width: 870px) {
+  .tagcont {
+    position: relative;
+    top: -15px;
+    left: -10px;
+  }
+}
+.cover {
+  height: 3.75rem;
+  width: 3.75rem;
+  background-color: white;
+  top: 3.125rem;
+  margin-left: 0px;
+}
+
+.scrolled {
+  background-color: red;
+}
+
+@media all and (max-width: 900px) {
+  .login {
+    position: relative;
+    left: 20px;
+  }
+}
+
+.login:focus {
+  outline: none;
+}
+
+.playmusic {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background: transparent;
+  color: white;
+  margin-top: 5px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.playmusic:focus {
+  outline: none;
+}
+
+.cleartags {
+  width: 40px;
+  height: 40px;
+  background-color: #b6b6b6;
+  color: black;
+  margin-top: 5px;
+  padding-top: 2px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.cleartags .material-icons {
+  font-size: 21px;
+}
+
+.cleartags:focus {
+  outline: none;
+}
+
+.more {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background: transparent;
+  color: white;
+  margin-top: 10px;
+  border: none;
+  border-radius: 50px;
+  right: 15px;
+}
+
+.more:focus {
+  outline: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f1f1f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  right: 10px;
+  transform: translateY(0px);
+}
+
+@media all and (max-width: 1139px) {
+  .dropdown-content {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transform: translateY(60px);
+  transition: ease-in-out;
+  transition-duration: 0.4s;
+}
+
+@media all and (max-width: 1229px) {
+  .exploretext {
+    display: none;
+  }
+}
+
+.toggleshowmobile {
+  display: block;
+}
+
+.sortingNavigation {
+  background: linear-gradient(90deg, black, #1d1d1d, #1d1d1d, #1d1d1d, black);
+  height: 70px;
+  display: flex;
+  padding-top: 65px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.sortingNavigation .exploretextcontainer {
+  width: 10%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.sortingNavigation .exploretextcontainer .exploretext {
+  color: #8d0096;
+  font-weight: bold;
+  font-size: 25px;
+  left: 15px;
+  position: relative;
+}
+
+.sortingNavigation .sortresult {
+  width: 80%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 669px) {
+  .sortresult {
+    text-align: center;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 669px) {
+  .sortresultbtn {
+    width: auto;
+  }
+}
+
+@media all and (max-width: 669px) {
+  .exploretextcontainer {
+    background: transparent;
+  }
+}
+
+.sortresultbtn button {
+  color: #fff;
+  outline: none;
+  background-color: #9fbdb85b;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 1px;
+  margin-bottom: 4px;
+}
+
+/* Create an active/current tablink class */
+.sortresultbtn button.active {
+  color: #fff;
+  outline: none;
+  background-color: #60c2b4;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 1px;
+  margin-bottom: 4px;
+}
+
+#btm-nav_downloadButton {
+  background: transparent;
+}
+
+#btm-nav_downloadButton button {
+  background: transparent;
+}
+
+#btm-nav_downloadButton button a {
+  background: transparent;
+}
+
+.result {
+  background: yellow;
+  position: relative;
+}
+
+.hamburger {
+  background-color: transparent;
+  border-radius: 50px;
+  color: #8d0096;
+  width: 45px;
+  height: 45px;
+  outline: none;
+  border: none;
+  display: none;
+  visibility: hidden;
+}
+
+@media all and (max-width: 1229px) {
+  .hamburger {
+    display: block;
+    visibility: visible;
+    position: absolute;
+  }
+}
+
+@media all and (max-width: 1229px) {
+  .showsidenav {
+    display: block;
+    transition: 0.2s ease-in-out;
+    transform: translateX(0px);
+    box-shadow: 200px 600px 0px 600px rgba(0, 0, 0, 0.61);
+    -webkit-box-shadow: 400px 600px 0px 600px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 200px 600px 0px 600px rgba(0, 0, 0, 0.61);
+  }
+}
+
+@media all and (max-width: 662px) {
+  .sortresult {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+.musiclist::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.musiclist::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.musiclist::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #8f0099;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #8f0099;
+}
+
+.filtercontainer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.filtercontainer::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+.filtercontainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #8f0099;
+}
+
+/*changes*/
+
+img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.nameText {
+  color: #5cbbae;
+  margin-top: 25px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  left: 100px;
+}
+
+.musiclist .selectedSong {
+  background-color: #000000;
+  box-shadow: 6px 6px 3px #62c8ba;
+}

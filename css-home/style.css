@@ -1,0 +1,1044 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 ,h5, h6, p{
+  font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-family: "Roboto", "Montserrat", sans-serif;
+}
+
+body {
+  background: #121212;
+  height:auto;
+
+}
+
+.herocontainerHome{
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  padding-top: 6%; /* 16:9 Aspect Ratio */
+
+}
+
+
+
+.heroHome {
+  background: url(../resources/hero_background.png) center;
+  background-size:cover;
+  background-position: center;
+  color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+
+
+}
+
+.heroHome .container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #7d2681, #3700ff70);
+  background-size: 300%;
+  position: relative;
+  -webkit-animation: hero-gradient 20s infinite alternate;
+  animation: hero-gradient 20s infinite alternate;
+
+
+}
+
+@-webkit-keyframes hero-gradient {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+@keyframes hero-gradient {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
+}
+
+.heroHome .container .arrow {
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+  position: absolute;
+  bottom: 2.5rem;
+  margin-bottom: -14px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 14px;
+  color: white;
+}
+
+.heroHome .container .arrow:hover {
+  -webkit-animation: arrow 4s infinite;
+          animation: arrow 4s infinite;
+}
+
+.heroHome .container .arrow .material-icons {
+  font-size: 2.5rem;
+}
+
+@-webkit-keyframes arrow {
+  25% {
+    bottom: 1.5rem;
+  }
+  50% {
+    bottom: 1.6rem;
+  }
+}
+
+
+.heroHome .header-container {
+  overflow: hidden;
+  position: absolute;
+  top: 14rem;
+  left: 2rem;
+}
+
+.heroHome .header-container h1 {
+  position: relative;
+  font-weight: 100;
+  font-size: 2.25rem;
+  -webkit-animation: header 4s;
+          animation: header 4s;
+}
+
+.heroHome .header-container p {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.heroHome .search {
+  position: absolute;
+  left: 47.5%;
+  top: 23rem;
+  -webkit-transform: translateX(-47.5%);
+          transform: translateX(-47.5%);
+  width: 50%;
+}
+
+.heroHome .search .scrolled {
+  display: contents;
+}
+
+.heroHome .search .search-icon {
+  position: absolute;
+  font-size: 1.7rem;
+  top: 50%;
+  left: 0.5rem;
+  top:32px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.heroHome .search input {
+  font-size: 1rem;
+  background: rgba(18, 18, 18, 0.75);
+  color: #f2f2f2;
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+  height: 1.8rem;
+  width: 100%;
+  border-radius: 15px;
+  border: none;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.25rem 0.06rem rgba(143, 0, 153, 0.714);
+          box-shadow: 0.1rem 0.1rem 0.25rem 0.06rem rgba(143, 0, 153, 0.714);
+}
+
+.heroHome .search input:focus {
+  outline: none;
+}
+
+.heroHome .search input::-webkit-input-placeholder {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 3rem;
+}
+
+.heroHome .search input:-ms-input-placeholder {
+  font-size: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 3rem;
+}
+
+.heroHome .search input::-ms-input-placeholder {
+  font-size: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 3rem;
+}
+
+.heroHome .search input::placeholder {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 3rem;
+}
+/*# sourceMappingURL=style.css.map */
+
+.content {
+  background: linear-gradient(#7d2681, #305d81);
+  padding-bottom: 75px;
+
+}
+.top-songs {
+  /*background: blue;*/
+  color: #fff;
+  width: 100%;
+  padding: 2.5rem 0;
+  padding-top:200px;
+  justify-content: center;
+}
+
+.top-songs h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.musiclist{
+  width: 85%;
+  margin-top: 20px;
+  margin: auto;
+}
+
+
+
+  
+  
+.musiclist li{
+  padding-left: 5px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  display: flex;
+  background-color: rgb(14, 14, 14);
+  width: 96%;
+  position: relative;
+  max-height: 60px;
+  border-radius: 35px;
+  box-shadow: 3px 3px 1.5px rgb(96,15,101);
+  margin-bottom: 15px;
+  transition-duration: 1s;
+}
+
+.musiclist .rightIcons {
+  background: transparent;
+  height: 100%;   
+  position: relative;
+  right: -15px;
+  top:0px;
+}
+
+@media all and (max-width: 1229px) {
+  .musiclist li{    
+    margin-left:0px ;
+    margin-right:0px ;
+    width: 97%;
+    left:0px;
+
+
+  }
+}
+
+
+
+
+@media all and (max-width: 870px) {
+  .musiclist li{    
+    padding-bottom: 30px;
+  }
+}
+
+@media all and (max-width: 406px) {
+  .musiclist li{    
+    margin-left:0px ;
+    margin-right:0px ;
+
+  }
+}
+
+@media all and (max-width: 569px) {
+  .musiclist li {
+    padding-left: 5px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;    
+    width: 106%;
+    left:-25px;
+    position: relative;
+    
+  }
+}
+
+@media all and (max-width: 569px) {
+  .topSongsRanking {
+    display: none;
+    
+  }
+}
+
+@media all and (max-width: 569px) {
+  .playButton {
+    left:10px;
+    position: relative;
+    
+  }
+}
+
+@media all and (max-width: 1229px) {
+  #musiclist .playmusic{    
+    right: 8px;
+    position: relative;
+
+
+  }
+}
+
+
+@media all and (max-width: 1229px) {
+  #musiclist1 .playmusic{    
+    right: 8px;
+    position: relative;
+
+
+  }
+}
+
+
+@media all and (max-width: 1139px) {
+  .more{ 
+    position: relative;
+    right: 0px;   
+
+
+  }
+}
+
+
+
+
+.details{
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+}
+
+
+
+.info{
+  display: flex;
+  width: 70%;
+  position: relative;
+  top:-8px;
+
+}
+
+@media all and (max-width: 870px) {
+  .info{    
+    display: block;
+    position: relative;
+    top:-15px;
+  
+
+  }
+}
+
+.title{
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  position: relative;
+  color:white;
+}
+
+@media all and (max-width: 870px) {
+  .title{    
+    width: 100%;
+
+  }
+}
+
+.composer{
+  font-size: 16px;
+  color:#707070;
+  margin-left: 10px;
+  position: relative;
+}
+
+
+.time{
+  margin-top: 25px;
+  position: relative;
+  background-color: transparent;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 16px;
+  color:#707070;
+  left:100px;
+
+}
+
+
+
+@media all and (max-width: 870px) {
+  .time{    
+    left:0px;
+  
+
+  }
+}
+
+  
+
+
+
+
+
+
+
+.tags{
+  margin-top: 22px;
+  margin-left: 2px;
+  position: relative;
+  background-color: #b6b6b6;
+  margin-left: 20px;
+  margin-right: -12px;
+  left:50px;
+  text-align: center;
+  font-size: 13px;
+  color:black;
+  padding-left:10px ;
+  padding-right:10px ;
+  padding-top:5px ;
+  padding-bottom:2px ;
+  height: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media all and (max-width: 870px) {
+  .tags{    
+    left:0px;
+  
+
+  }
+}
+
+.unusedtags{
+  margin-top: 22px;
+  margin-left: 2px;
+  position: relative;
+  background-color: #242424;
+  border:1px solid #b6b6b6;
+  margin-left: 20px;
+  margin-right: -12px;
+  text-align: center;
+  font-size: 13px;
+  color:#b6b6b6;
+  padding-left:10px ;
+  padding-right:10px ;
+  padding-top:5px ;
+  padding-bottom:2px ;
+  height: 20px;
+  border-radius: 50px;
+
+}
+
+.tagcont{
+  position: relative;
+  width: 30%;
+  background-color: transparent;
+  display: flex;
+  text-transform: uppercase;
+
+}
+
+
+
+
+@media all and (max-width: 870px) {
+  .tagcont{    
+    position: relative;
+    top:-15px;
+    left:-10px;
+  
+
+  }
+}
+
+
+
+
+.cover{
+  height: 60px;
+  width: 60px;
+  background-color:white ;
+  top:50px;
+  margin-left: 0px;
+}
+
+.playmusic{
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background:transparent ;
+  color:white;
+  margin-top:5px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.playmusic:focus{
+  outline: none;
+}
+
+.cleartags{
+  width: 40px;
+  height: 40px;
+  background-color: #b6b6b6;
+  color:black;
+  margin-top:5px;
+  padding-top: 2px;
+  border: none;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.cleartags .material-icons{
+  font-size: 21px;
+}
+
+.playButton {
+  width: 25px;
+  height: 25px;
+}
+
+.cleartags:focus{
+  outline: none;
+}
+
+.more{
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background:transparent ;
+  color:white;
+  margin-top:10px;
+  border: none;
+  border-radius: 50px;
+  right: 15px;   
+}
+
+.more:focus{
+  outline: none;
+
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f1f1f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  right: 10px;
+  transform: translateY(0px);
+  text-align: left;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-radius: 2px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  color: white;
+  top:60px;
+  
+
+
+}
+
+.dropdown-content p, .dropdown-content a{
+  text-align: left;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left:10px ;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+
+}
+
+
+
+.dropdown-content p:hover, .dropdown-content a:hover{
+  background-color: rgb(54, 54, 54);
+  }
+
+
+  @media all and (max-width: 924px) {
+    .dropdown-content {
+    }
+  }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.topSongsRanking {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  position: relative;
+  left: -50px;
+}
+
+#homeLink {
+  background-color: #8F0099;
+  color: white;
+}
+
+#aboutLink {
+  background-color: black !important;
+  color: white;
+}
+
+.features, .features2 {
+  background-color: transparent !important;
+}
+
+#songsTable{
+  display: none;
+}
+
+tr{
+  display: none;
+}
+
+br{  
+  display: none;
+}
+
+b{  
+  display: none;
+}
+
+@media all and (max-width: 740px){
+  li{ 
+    position: relative;
+    left:15px;  
+  }
+}
+
+@media all and (max-width: 740px){
+  li{ 
+    position: relative;
+    left:15px;  
+  }
+}
+
+@media all and (max-width: 740px){
+  .topSongsRanking{ 
+    left:-40px;  
+  }
+}
+
+.header-container{
+  animation:slideInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.9s; /* don't forget to set a duration! */
+}
+
+
+.herocontainerHome{
+  animation:fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.2s; /* don't forget to set a duration! */
+}
+
+
+/*changes*/
+
+img{
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  }
+
+@media all and (max-width: 450px) {
+  .heroHome .search {
+    top: 28rem;
+  }
+}
+
+.nameText {
+  color: #5CBBAE;
+  margin-top: 25px;
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  left:30%;
+}
+
+.musiclist .selectedSong {
+  background-color: #000000;
+  box-shadow: 6px 6px 3px #62C8BA;
+}
+
+
+.title {
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 10px;
+  position: relative;
+}
+
+@media all and (max-width: 870px) {
+  .title {
+    width: 100%;
+  }
+}
+
+.composer {
+  font-size: 16px;
+  color: #707070;
+  margin-left: 10px;
+  position: relative;
+
+}
+
+.time {
+  margin-top: 25px;
+  position: absolute;
+  background-color: transparent;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #707070;
+  left: 200%;
+}
+
+
+
+
+
+.tags {
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  font-size: 14px;
+  color: #707070;
+  cursor: pointer;
+  left: 40%;
+
+
+}
+
+
+@media all and (max-width: 870px) {
+  .tags {
+    left: 10px;
+    margin-right:-30px;
+    position: relative;
+    border-radius: 0px;
+    font-size: 16px;
+    padding-top:0px;
+    margin-top: 25px;
+
+  }
+}
+
+@media all and (max-width: 870px) {
+  #firstTag {
+    position: relative;  
+    background-color: transparent;
+    border-left: 1.5px solid #707070;
+    padding-left: 10px;
+    margin-left: -1px;
+    height: 15px;
+    padding-top:0px;
+    margin-top: 25px;
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 1122px) {
+  .time {
+    left:220%;
+  }
+}
+
+@media all and (max-width: 870px) {
+  .time {
+    left: 20px;
+    position: relative;  
+    border-left: 1.5px solid #707070;
+    padding-left: 10px;
+    margin-left: 20px;
+    height: 17px;
+    font-size: 16px;
+
+  }
+}
+
+@media all and (max-width: 870px) {
+  .nameText {
+    color: #5cbbae;
+    margin-top: 25px;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    left: 22px;
+    position: relative;
+    padding-right: 10px;
+    margin-right: 10px;
+    height: 17px;
+  }
+}
+
+
+.playlistbtn{
+  background-color: purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: none;
+  border: none;
+  color: #f1f1f1;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  width: auto;
+  position: relative;
+  display: block;
+}
+
+.addtoplaylistbuttontest{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+
+}
+
+.showatplmenu{
+  display: block;
+}
+
+.dontshowatplmenu{
+  display: none;
+
+}
+
+
+.plb-container{
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.addToPlaylistPanel{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  background-color: transparent;
+  width: 100%;
+
+}
+
+.addToPlaylistPanel br{
+  display: none;
+}
+
+
+
+
+
+
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  padding-top: 30vh;
+  top:0px;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.589); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content2 {
+  background-color: #121212;
+  margin: auto;
+  padding: 20px;
+  width: 15%;
+  height:auto;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+
+}
+
+
+
+.modal-content2 h1{
+width: 100%;
+background-color: transparent;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+font-size: 1.6rem;
+
+}
+
+@media all and (max-width: 1228px) {
+  .modal-content2{
+    width: 80%;
+
+  }
+}
+
+
+/* The Close Button */
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.playlistbtn{
+  background-color: purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: none;
+  border: none;
+  color: #f1f1f1;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  width: auto;
+  position: relative;
+  display: block;
+}
+
+.addtoplaylistbuttontest{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+
+}
+
+.showatplmenu{
+  display: block;
+}
+
+.dontshowatplmenu{
+  display: none;
+
+}
+
+
+.plb-container{
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.addToPlaylistPanel{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  background-color: transparent;
+  width: 100%;
+
+}
+
+.addToPlaylistPanel br{
+  display: none;
+}
+
+.features, .features2 {
+  height: 70vh !important;
+}
+

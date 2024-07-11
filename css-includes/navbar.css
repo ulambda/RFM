@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+header {
+  background: linear-gradient(
+    90deg,
+    #57015f,
+    black,
+    black,
+    black,
+    black,
+    black,
+    #57015f
+  );
+
+  z-index: 10;
+  height: 65px;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  z-index: 12;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.logo {
+  width: 200px;
+  height: 100%;
+}
+
+.logo a img {
+  width: 80px;
+  float: right;
+}
+
+.navlinks {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbtn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 99%;
+  text-align: center;
+  outline: none;
+  border: none;
+  width: 100px;
+  transition: 0.4s;
+}
+
+.rightlinks button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  margin-right: 50px;
+  transition: 0.4s;
+  border-radius: 100%;
+  width: 70px;
+}
+
+#loggedOutButton {
+  border-radius: 0%;
+  height: 100%;
+}
+
+.navlinks button span {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navlinks button:hover {
+  background-color: #8f0099;
+  color: white;
+  cursor: pointer;
+}
+
+#navBar-logo {
+  position: relative;
+  left: -70px;
+}
+
+.rightlinks {
+  position: relative;
+  left: 0px;
+}
+
+@media all and (max-width: 925px) {
+  .rightlinks {
+    width: 160px;
+    position: relative;
+    left: 30px;
+  }
+}
+
+@media all and (max-width: 920px) {
+  .logo {
+    width: 22%;
+    height: 100%;
+  }
+}
+
+@media all and (max-width: 740px) {
+  .logo {
+    width: 100px;
+    height: 100%;
+  }
+}
+
+@media all and (max-width: 740px) {
+  #navBar-logo {
+    position: relative;
+    left: -60px;
+  }
+}
+
+@media all and (max-width: 740px) {
+  #navBar-logo {
+    position: relative;
+    left: 10px;
+  }
+}
+
+@media all and (max-width: 740px) {
+  .navbtn {
+    visibility: hidden;
+  }
+}
+
+.profilePicture {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  top: -1px;
+  width: 100%;
+  border-radius: 100%;
+  transition: 0.5s;
+  border: rgba(255, 255, 255, 0) solid 2px;
+}
+
+.clickedOff:hover {
+  border: rgba(255, 255, 255, 0.5) solid 2px;
+}
+
+.clickedOn {
+  border: rgb(255, 255, 255) solid 2px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.accountDropdown {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.dropdown-content-nav {
+  margin: 0;
+  display: none;
+  position: absolute;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  right: 0;
+  z-index: 1;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  width: 200px;
+  top: 65px;
+  transition: 0.4s;
+}
+
+.dropdown-content-nav a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: #8f0099;
+}
+
+.show {
+  display: block;
+}
+
+.navsearchbar {
+  display: none;
+  width: 90%;
+  background-color: transparent;
+  height: 100%;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 2%;
+  overflow: none;
+}
+
+.topnavform {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+@media all and (max-width: 1218px) {
+  .topnavform {
+    width: auto;
+  }
+}
+
+form {
+  height: 100%;
+  width: 100%;
+}
+
+.navsearch {
+  display: flex;
+}
+
+.show {
+  display: block;
+}
+
+.navsearchbar button {
+  width: 40px;
+  top: -52px;
+  margin-top: 12px;
+  height: 40px;
+  background-color: transparent;
+}
+
+input {
+  background-color: #1b1b1b;
+  width: 92%;
+  padding: 10px;
+  height: 20px;
+  margin-top: 12px;
+  padding-left: 45px;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.expand2 {
+  background-color: transparent;
+  width: 50%;
+  position: relative;
+  left: 15px;
+  transition: 0.5;
+}
+
+.expand{
+  background-color: transparent;
+  width: 80%;
+  pointer-events: inherit;
+  overflow: hidden;
+  pointer-events: visible;
+  
+
+}
+
+
+.searchbartoggle {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 99%;
+  text-align: center;
+  outline: none;
+  border: none;
+  width: 100px;
+  transition: 0.4s;
+}
+
+.searchbutton {
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 99%;
+  text-align: center;
+  outline: none;
+  border: none;
+  width: 100px;
+  transition: 0.4s;
+}
+
+.smol {
+  display: none;
+}
+
+#closesearch {
+  position: relative;
+  top: -65px;
+  left: -13px;
+}
+
+@media all and (max-width: 1820px) {
+  #closesearch {
+    left: -0%;
+  }
+}
+
+@media all and (max-width: 455px) {
+  .searchbartoggleorigin {
+    display: none;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .navbtn {
+    display: none;
+  }
+}
+
+.mobile-nav-btn {
+  position: absolute;
+  left: 15px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  top: 7px;
+  border-radius: 50px;
+  color: white;
+  z-index: 20;
+}
+
+@media all and (max-width: 925px) {
+  .mobile-nav-btn {
+    display: block;
+  }
+}
+
+.mobile-sidenav {
+  height: 100vh;
+  width: 250px;
+  background-color: #0f0f0f;
+  position: absolute;
+  z-index: 0;
+  transform: translateX(-260px);
+  display: none;
+  transition-duration: 0.3s;
+  margin-top: 60px;
+  display: none;
+}
+
+@media all and (max-width: 925px) {
+  .mobile-sidenav {
+    display: block;
+  }
+}
+
+.mobile-sidenav button {
+  font-size: 14px;
+}
+
+.show-mobile-sidenav {
+  transform: translateX(0px);
+  transition-duration: 0.3s;
+}
+
+.sidebtn {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  text-align: left;
+  background-color: transparent;
+  color: white;
+}
+
+@media all and (max-width: 925px) {
+  .rightlinks button {
+    position: relative;
+    text-align: center;
+    margin-right: 50px;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .logo {
+    position: relative;
+    left: 50px;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .searchbartoggle {
+    left: 35px;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .navsearchbar {
+    width: 90%;
+    position: relative;
+    left: 0px;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .navsearch {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .fillnav {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+}
+
+@media all and (max-width: 925px) {
+  #closesearch {
+    position: relative;
+    top: -104px;
+    left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: transparent;
+  }
+}
+
+.mobilesearchtoggle {
+  display: none;
+}
+
+@media all and (max-width: 925px) {
+  .mobilesearchtoggle {
+    display: block;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .rightlinks {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .accountDropdown {
+    left: 20px;
+  }
+}
+
+@media all and (max-width: 925px) {
+  .dropdown-content-nav {
+    left: -70px;
+  }
+}
+
+.navsearchbar {
+  animation: Fadein;
+  animation-duration: 0.5s;
+}
+
+@keyframes Fadein {
+  0% {
+    transform: translate(100px, 0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+.blind {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transform: translateX(-100px);
+}
+
+@media all and (max-width: 925px) {
+  .gtfo {
+    display: none;
+  }
+}

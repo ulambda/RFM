@@ -1,0 +1,714 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html > ::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #8f0099;
+}
+
+body {
+  background: #121212;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100%;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: #121212;
+  padding: 1.5rem;
+  padding-top: 80px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+main > .container {
+  width: 23rem;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 23rem;
+  grid-template-columns: 23rem;
+  grid-template-areas:
+    "profile"
+    "recent"
+    "playlist"
+    "songs";
+  grid-gap: 1rem;
+  grid-template-rows: auto auto auto 64rem;
+}
+
+@media all and (min-width: 50rem) {
+  body {
+    font-size: 1rem;
+  }
+  main > .container {
+    width: 49rem;
+    -ms-grid-columns: (1fr, 2);
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 16rem;
+    grid-template-areas:
+      "profile recent"
+      "profile playlist"
+      "profile playlist"
+      "songs songs"
+      "songs songs";
+    grid-template-rows: 16rem;
+  }
+}
+
+@media all and (min-width: 81.875rem) {
+  body {
+    font-size: 1rem;
+  }
+  main > .container {
+    width: 100%;
+    -ms-grid-columns: (1fr, 3);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "profile recent songs"
+      "profile playlist songs"
+      "profile playlist songs";
+    grid-template-rows: 16rem;
+    grid-auto-rows: 16rem;
+  }
+}
+
+@media all and (max-width: 24.875rem) {
+  html {
+    font-size: 11px;
+  }
+}
+
+main > .container .profile,
+main > .container .recent,
+main > .container .playlist,
+main > .container .songs {
+  background: #202020;
+  -webkit-box-shadow: 3px 3px 3px rgba(230, 0, 255, 0.16);
+  box-shadow: 3px 3px 3px rgba(230, 0, 255, 0.16);
+  border-radius: 1rem;
+  padding: 1.75rem;
+}
+
+main .profile {
+  grid-row: 1;
+  grid-column: 1;
+  column-span: 3;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: profile;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+main .profile .profile-picture {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 12rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+}
+
+main .profile .profile-picture .on-hover {
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: transparent;
+  transition: background, color 0.1s ease-out;
+}
+
+main .profile .profile-picture .on-hover > span {
+  display: none;
+  font-size: 5rem;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+}
+
+main .profile .profile-picture .on-hover:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+main .profile .profile-picture .on-hover:hover > span {
+  display: block;
+}
+
+main .profile > p {
+  color: #5b5d5c;
+  font-size: 0.8rem;
+}
+
+main .profile .analytics-header {
+  width: 100%;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+main .profile .analytics-header p {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+main .profile .profile-settings {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+main .profile .profile-settings .profile-settings-card {
+  width: 40rem;
+  height: 20rem;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+main
+  .profile
+  .profile-settings
+  .profile-settings-card
+  .profile-settings-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 1rem;
+}
+
+main
+  .profile
+  .profile-settings
+  .profile-settings-card
+  .profile-settings-header
+  .material-icons {
+  cursor: pointer;
+}
+
+main .profile .profile-settings .profile-settings-card .settings > div {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid #202020;
+  color: #dcdcdc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+main
+  .profile
+  .profile-settings
+  .profile-settings-card
+  .settings
+  .profile-picture {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: url(../resources/users/profilePicture/defualt_profile_image_large_224px.png)
+    center no-repeat;
+  background-size: cover;
+}
+
+main .profile .profile-settings.clicked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: center;
+  flex-direction: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+main .profile .profile-settings.clicked .profile-settings-card {
+  background: #121212;
+}
+
+main .profile .profile-analytics {
+  padding: 1rem 0;
+}
+
+main .profile .profile-analytics > div {
+  padding: 0.5rem;
+}
+
+main .profile .profile-analytics > div h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+main .recent {
+  grid-row: 2;
+  grid-column: 1;
+  column-span: 3;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: recent;
+  font-size: 0.8rem;
+}
+
+main .recent > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .recent > div .song-cover {
+  width: 9.75rem;
+  height: 9.75rem;
+  background-size: cover;
+  margin-right: 5%;
+}
+
+main .recent > div .song-details {
+  height: 100%;
+}
+
+main .recent > div .song-details h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+main .recent > div .song-details h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5b5d5c;
+}
+
+main .recent > div .song-details .statistics {
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+main .playlist {
+  grid-row: 3;
+  grid-column: 1;
+  column-span: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: playlist;
+}
+
+main .playlist .container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main .playlist .container h1 {
+  font-size: 1.5rem;
+}
+
+main .playlist .container .playlist-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .playlist .container .playlist-container {
+  background: #171717;
+  -webkit-box-flex: 9;
+  -ms-flex: 9;
+  flex: 9;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+main .playlist .container .playlist-container .playlist {
+  background: #000;
+  -webkit-box-shadow: 0px 0px 5px #f323c4;
+  box-shadow: 0px 0px 5px #f323c4;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main .playlist .container .playlist-container:last-child {
+  margin-bottom: 0;
+}
+
+main .songs {
+  grid-row: 4;
+  grid-column: 1;
+  column-span: 3;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: songs;
+}
+
+main .songs .container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main .songs .container .song-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .songs .container .song-container {
+  background: #171717;
+  -webkit-box-flex: 14;
+  -ms-flex: 14;
+  flex: 14;
+  overflow-y: scroll;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 4rem;
+  grid-row-gap: 0.5rem;
+}
+
+main .songs .song {
+  background: #000;
+  -webkit-box-shadow: 0px 0px 9px rgba(0, 195, 255, 0.16);
+  box-shadow: 0px 0px 9px rgba(0, 195, 255, 0.16);
+  width: 100%;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+main .filter {
+  /* border: 2px solid white; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  color: #63c8ba;
+  position: relative;
+}
+
+main .filter::-moz-selection {
+  background: none;
+}
+
+main .filter::selection {
+  background: none;
+}
+
+main .filter > .material-icons {
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  color: white;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-size: 1.2rem;
+}
+
+main .filter > .material-icons.material-icons-clicked {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+main .filter > .material-icons::-moz-selection {
+  background: none;
+}
+
+main .filter > .material-icons::selection {
+  background: none;
+}
+
+main .filter .accordion {
+  overflow: hidden;
+  box-sizing: content-box;
+  position: absolute;
+  top: 1.5rem;
+  right: 0rem;
+  z-index: 997;
+  background: black;
+  height: 0;
+  transition: height 0.3s;
+}
+
+main .filter .clicked {
+  height: 11.8rem;
+}
+
+.main .filter .accordion .accordion-content {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+main .filter .accordion p {
+  color: #f1f1f1;
+  padding: 0.5rem 1rem;
+}
+
+.slider {
+  margin-left: 10px;
+  -webkit-appearance: none;
+  width: 50%;
+  height: 5px;
+  background: #7affed;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 25px;
+  background: #7affed;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4caf50;
+  cursor: pointer;
+}
+
+.playButton {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.nextButton {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.form-box {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid rgb(105, 105, 105);
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.input-field::placeholder {
+  color: rb(105, 105, 105);
+}
+
+.submit-btn {
+  width: 100%;
+  height: 40px;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  background: linear-gradient(
+    to right,
+    rgba(200, 0, 226, 0.75),
+    rgb(86, 0, 95, 0.75)
+  );
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  color: white;
+}
+
+.check-box {
+  margin: 30px 10px 30px 0;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+}
+
+.dropdown-content {
+  background-color: #1f1f1f;
+}
+
+#deleteForm {
+  height: 100%;
+  width: 100%;
+}
+
+#deleteButton {
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+}
+
+#deleteButton:hover {
+  background-color: rgb(54, 54, 54);
+}

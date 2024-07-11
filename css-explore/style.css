@@ -1,0 +1,241 @@
+#songsTable {
+  display: none;
+}
+
+#exploreLink {
+  background-color: #8f0099;
+  color: white;
+}
+
+
+.musiclist {
+  width: 85%;
+  height: 69vh;
+  margin-top: 9px;
+  padding-top: 9px;
+  position: relative;
+  left: 14.5%;
+  overflow:scroll;
+  height: 79%;
+}
+
+@media all and (max-width: 1229px) {
+  .musiclist {
+    left: auto;
+    width: 99%;
+    overflow-x: hidden;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+/* ---------- main content ---------- */
+.main-container {
+  color: #f1f1f1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 130px;
+  position: relative;
+}
+
+.panel button {
+  background-color: transparent;
+  border: solid 1px rgba(128, 0, 128, 0.548);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: none;
+  color: #f1f1f1;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
+
+.dropdown-content p:hover, .dropdown-content a:hover{
+  background-color: rgb(54, 54, 54);
+}
+
+@media all and (max-width: 924px) {
+  .dropdown-content {
+    right: -100px;
+  }
+}
+
+.sortingNavigation{
+  z-index: 50;
+
+}
+
+.sortingNavigation .exploretextcontainer {
+  width: 10%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.sortingNavigation .exploretextcontainer .exploretext {
+  color: #8d0096;
+  font-weight: bold;
+  font-size: 25px;
+  left: 15px;
+  position: relative;
+}
+
+.sortingNavigation .sortresult {
+  width: 80%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 669px) {
+  .sortresult {
+    position: relative;
+  }
+}
+
+@media all and (max-width: 924px) {
+  .dropdown-content {
+    right: -100px;
+  }
+}
+
+.sortresultbtn button {
+  color: rgb(255, 255, 255);
+  outline: none;
+  background-color: #175e52;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 4px;
+  width: 175px;
+  z-index: 100;
+}
+
+
+
+
+
+/* Create an active/current tablink class */
+.sortresultbtn button .active {
+  color: #fff;
+  outline: none;
+  background-color: #36b3a0;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 1px;
+  margin-bottom: 4px;
+}
+
+
+
+@media all and (max-width: 1228px) {
+  .sortresultbtn {
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 1228px) {
+  .topsrb {
+    display: none;
+  }
+}
+
+.sidesrb{
+  display: none;
+}
+
+@media all and (max-width: 1228px) {
+  .sidesrb {
+    display: block;
+  }
+}
+
+@media all and (max-width: 924px) {
+  .dropdown-content {
+    right: -100px;
+  }
+}
+
+.sortresultbtn .active{
+  background-color: #36b3a0;
+}
+
+.topsrb .active{
+  background-color: #36b3a0;
+}
+
+.panel .activetag{
+  background-color: purple;
+}
+
+.sideetext{
+  color: #8d0096;
+  font-weight: bold;
+  font-size: 25px;
+  left: 15px;
+  position: relative;
+}
+
+
+.topsb{
+  margin-top:-20px;
+}
+
+#loadMoreButton {
+  background-color: #8f0099;
+  color: rgb(255, 255, 255);
+  outline: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 10%;
+  width: 175px;
+  height: 35px;
+  position: relative;
+  left: 50%;
+  margin-left: -87.5px;
+}
+
+#thefile {
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  z-index: 100;
+  width: 100px;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}

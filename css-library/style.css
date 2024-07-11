@@ -1,0 +1,331 @@
+:root {
+  --backgroundColor: linear-gradient(
+    to right,
+    hsl(288, 100%, 50%),
+    hsl(54, 100%, 30%)
+  );
+  --backgroundColorOpacity: 0;
+}
+
+#songsTable {
+  display: none;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
+
+
+#libraryLink {
+  background-color: #8f0099;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+.musiclist{
+  width: 85%;
+  height: 79%;
+  margin-top: 9px;
+  padding-top: 9px;
+  padding-left: 10px;
+  position: relative;
+  left: 14.5%;
+  overflow:auto;
+
+}
+
+@media all and (max-width: 1229px) {
+  .musiclist {
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+    text-align: center;
+    overflow-x: hidden;
+    padding-right:0px;
+    padding-left: 0px;
+  }
+}
+
+/* ---------- main content ---------- */
+.main-container {
+  color: #f1f1f1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 130px;
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    #121212,
+    #121212
+  );
+  z-index: 1;
+}
+
+.main-container::before {
+  color: #f1f1f1;
+  display: flex;
+  width: 100%;
+  top: 130px;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: var(--backgroundColor);
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: var(--backgroundColorOpacity);
+}
+
+/*.main-container:hover::before {
+  opacity: 1;
+}*/
+
+
+
+.panel button {
+  background-color: purple;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  outline: none;
+  border: none;
+  color: #f1f1f1;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+
+
+.dropdown-content p:hover, .dropdown-content a:hover{
+  background-color: rgb(54, 54, 54);
+  }
+@media all and (max-width: 1139px) {
+  .dropdown-content {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+
+
+.sortingNavigation .exploretextcontainer {
+  width: 16.7%;
+  height: 100%;
+  justify-content: left;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, black, #1d1d1d, #1d1d1d,);
+  z-index: 20;
+}
+
+.sortingNavigation .exploretextcontainer .exploretext {
+  color: #8d0096;
+  font-weight: bold;
+  font-size: 25px;
+  left: 15px;
+  position: relative;
+  left:20px;
+}
+
+.sortingNavigation .sortresult {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 669px) {
+  .sortresult {
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    z-index: 0;
+    left:-35px;
+    width: 100%;
+    
+  }
+}
+
+
+
+.sortresultbtn button {
+  color: #fff;
+  outline: none;
+  background-color: #9fbdb85b;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 1px;
+  margin-bottom: 4px;
+}
+
+/* Create an active/current tablink class */
+.sortresultbtn button.active {
+  color: #fff;
+  outline: none;
+  background-color: #60c2b4;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 1px;
+  margin-bottom: 4px;
+}
+
+
+
+
+
+#playlistText{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+  padding-top:35px ;
+  left: 20px;
+  z-index: 30;
+  position: relative;
+
+
+}
+
+.colorchange{
+  background-color: #18574e;
+  background: linear-gradient(
+    180deg,
+    #18574e,
+    #121616
+  );
+}
+
+
+.colorchangeheader{
+  background-color: rgba(226, 226, 226, 0);
+}
+
+@media all and (max-width: 1228px) {
+  .sortingNavigation .exploretextcontainer {
+    background: transparent;
+    width: 10%;
+  }
+}
+
+@media all and (max-width: 1228px) {
+  .sortingNavigation .exploretextcontainer .exploretext{
+    color: #8d0096;
+    font-weight: bold;
+    font-size: 25px;
+    left: 150px;
+    position: relative;
+  }
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 12%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.39); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #121212;
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  height:40%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+@media all and (max-width: 1228px) {
+  .modal-content{
+    width: 90%;
+
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header{
+  position: relative;
+  top:0px;
+  width: 100%;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border-bottom: solid 1px white;
+  
+}
+
+.modal-header p{
+  text-align: left;
+}
+
+
+.inputplname{
+  margin-bottom:20px ;
+  width: 80%;
+}
+
+.createbutton{
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  position: relative;
+  margin-left:auto ;
+  margin-right:auto ;
+  
+}
+
+.panel br{
+  display: none;
+}
